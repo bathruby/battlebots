@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'rtanque'
+gem 'rtanque', :github => 'andrew/rtanque'
 gem 'texplay', '0.4.4.pre'
