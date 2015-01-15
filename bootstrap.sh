@@ -1,9 +1,6 @@
 #!/bin/bash
 set -x; #echo on
 
-#Ideally would use Ansible to do this stuff instead of a shell script. But the Ansible Controller-server can't be windows, so direct provisioning using vagrant doesn't work.
-# Possible workaround here boots VM then runs ansible locally to complete the rest of the setup: https://groups.google.com/forum/#!topic/vagrant-up/3fNhoow7mTE
-
 apt-get update;
 apt-get install -q -y htop git jq;
 
