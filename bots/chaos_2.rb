@@ -55,8 +55,8 @@ class Chaos2 < RTanque::Bot::Brain
       command.heading = @desired_heading
       command.turret_heading = @desired_heading
     else
-      command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-10))
-      command.turret_heading = sensors.turret_heading - (RTanque::Heading::ONE_DEGREE * (rand*40-10))
+      command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
+      command.turret_heading = sensors.turret_heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
     end
   end
 
