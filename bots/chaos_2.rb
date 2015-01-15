@@ -27,7 +27,7 @@ class Chaos2 < RTanque::Bot::Brain
     command.radar_heading = reflection.heading
     command.turret_heading = reflection.heading
 
-    command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*50-10))
+    command.heading = reflection.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
 
     # change speed based on how close to the target
     command.speed = if reflection.distance > 100
