@@ -64,7 +64,7 @@ class Chaos2 < RTanque::Bot::Brain
     @locked_on ||= nil
     lock = if @locked_on
       Chaos2::NAME.replace "#{NAME.gsub(/\(.+?\)/, '')}(#{@locked_on.gsub(/\(.+?\)/, '')})"
-      sensors.radar.find { |reflection| reflection.name == @locked_on } #|| sensors.radar.first
+      sensors.radar.find { |reflection| reflection.name == @locked_on } || sensors.radar.first
     else
       sensors.radar.first
     end
