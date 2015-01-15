@@ -1,4 +1,4 @@
-class MyDeadlyBot < RTanque::Bot::Brain
+class FletchBot < RTanque::Bot::Brain
   NAME = 'FletchBot'
   include RTanque::Bot::BrainHelper
 
@@ -28,13 +28,13 @@ class MyDeadlyBot < RTanque::Bot::Brain
     #sensors.radar.each do |reflection|
     #  puts "  #{reflection.name} #{reflection.heading.inspect} #{reflection.distance}"
     #end
-    
+
     # use self.sensors to detect things
     # See http://rubydoc.info/github/awilliams/RTanque/master/RTanque/Bot/Sensors
-    
+
     # use self.command to control tank
     # See http://rubydoc.info/github/awilliams/RTanque/master/RTanque/Bot/Command
-    
+
     # self.arena contains the dimensions of the arena
     # See http://rubydoc.info/github/awilliams/RTanque/master/frames/RTanque/Arena
   end
