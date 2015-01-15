@@ -20,7 +20,13 @@ $ bundle install
 ```
 
 ## Vagrant
-If you don't have the dependencies installed or you running on Windows, you can use Vagrant to create a Virtual Machine with all dependencies set up automatically. Install Vagrant and Virtualbox, then run `vagrant up` and you should see the VM start up & dependencies be downloaded and installed.
+If you don't have the dependencies installed or you are running on Windows, you can use Vagrant to create a Virtual Machine with all dependencies set up automatically. Install [Vagrant](https://www.vagrantup.com/) and [Virtualbox](https://www.virtualbox.org/), then run `vagrant up` from the root of this repository and you should see the VM start up & dependencies be downloaded and installed.
+
+```
+$ git clone git@github.com:bathruby/battlebots.git
+$ cd battlebots
+$ vagrant up
+```
 
 Once you see the GUI login menu appear (after a VM restart), log in with the "Vagrant" user, password "vagrant", open a terminal, `cd /vagrant` and start playing as below:
 
