@@ -19,6 +19,11 @@ $ cd battlebots
 $ bundle install
 ```
 
+## Vagrant
+If you don't have the dependencies installed or you running on Windows, you can use Vagrant to create a Virtual Machine with all dependencies set up automatically. Install Vagrant and Virtualbox, then run `vagrant up` and you should see the VM start up & dependencies be downloaded and installed.
+
+Once you see the GUI login menu appear (after a VM restart), log in with the "Vagrant" user, password "vagrant", open a terminal, `cd /vagrant` and start playing as below:
+
 ## How to play
 
 Generate a new bot with:
