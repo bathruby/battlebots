@@ -27,7 +27,7 @@ class Chaos2 < RTanque::Bot::Brain
     command.radar_heading = reflection.heading
     command.turret_heading = reflection.heading
 
-    command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*50-10))
+    command.heading = reflection.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
 
     # change speed based on how close to the target
     command.speed = if reflection.distance > 100
@@ -55,8 +55,8 @@ class Chaos2 < RTanque::Bot::Brain
       command.heading = @desired_heading
       command.turret_heading = @desired_heading
     else
-      command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-10))
-      command.turret_heading = sensors.turret_heading - (RTanque::Heading::ONE_DEGREE * (rand*40-10))
+      command.heading = sensors.heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
+      command.turret_heading = sensors.turret_heading - (RTanque::Heading::ONE_DEGREE * (rand*40-20))
     end
   end
 
@@ -64,7 +64,7 @@ class Chaos2 < RTanque::Bot::Brain
     @locked_on ||= nil
     lock = if @locked_on
       Chaos2::NAME.replace "#{NAME.gsub(/\(.+?\)/, '')}(#{@locked_on.gsub(/\(.+?\)/, '')})"
-      sensors.radar.find { |reflection| reflection.name == @locked_on } #|| sensors.radar.first
+      sensors.radar.find { |reflection| reflection.name == @locked_on } || sensors.radar.first
     else
       sensors.radar.first
     end
