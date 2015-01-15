@@ -1,4 +1,4 @@
-class MyDeadlyBot < RTanque::Bot::Brain
+class DanCantRuby < RTanque::Bot::Brain
   NAME = 'dan_cant_ruby'
   include RTanque::Bot::BrainHelper
 
@@ -19,8 +19,15 @@ class MyDeadlyBot < RTanque::Bot::Brain
     command.heading = Math::sin((sensors.position.y + 1) / (sensors.position.x + 1)) * Math::PI * 2.0
     #puts "#{sensors.position.x},#{sensors.position.y}"
 #    nearest = sensors.radar.min {|a,b| a.distance <=> b.distance}
-#    command.radar_heading = Math::PI / 8.0
-    command.turret_heading = sensors.turret_heading + 0.1 #Math::PI * 3.0 / 4.0
-    command.fire(0.1)
+    if sensors.radar.count > 0
+      target = sensors.radar.first
+      command.radar_heading = target.heading
+      command.turret_heading = target.heading
+    else
+      command.radar_heading = Math::PI / 8.0
+      command.turret_heading = sensors.turret_heading + 0.2 #Math::PI * 3.0 / 4.0
+
+    end
+    command.fire(2)
   end
 end
