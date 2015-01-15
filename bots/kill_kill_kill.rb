@@ -37,15 +37,15 @@ class KillKillKill < RTanque::Bot::Brain
 
 end
 
-module RTanque
-  class Bot
-    def fire_power
-      if name != "Kill kill kill"
-        0
-      else
-        MAX_FIRE_POWER
-      end
-    end
-  end
-end
-
+# module RTanque
+#   class Bot
+#     def fire_power
+#       if name != "Kill kill kill"
+#         0
+#       else
+#         MAX_FIRE_POWER
+#       end
+#     end
+#   end
+# end
+#
